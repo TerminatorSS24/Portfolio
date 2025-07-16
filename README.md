@@ -8,11 +8,7 @@ Welcome to the source code of my personal developer portfolio website — a mode
 
 ---
 
-Here's a complete README.md for your portfolio project based on the exact structure you provided. This README includes an overview, tech stack, file structure, setup instructions, and more — tailored for a modern React + TypeScript + Vite + TailwindCSS project.
-
----
-
-## 🚀 Tech Stack
+## 🛠️ Tech Stack
 
 - ⚛️ **React** (with functional components)
 - 🟦 **TypeScript**
@@ -23,97 +19,64 @@ Here's a complete README.md for your portfolio project based on the exact struct
 
 ---
 
-## 📁 Project Structure
-bash
-├── public/                   # Static files
+## 📂 Project Structure
+```
+├── public/ # Static files
 ├── src/
-│   ├── assets/              # Images, logos, resume
-│   ├── components/          # Reusable React components (Navbar, Hero, Skills, etc.)
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utility libraries or helpers
-│   ├── pages/               # Page-level components
-│   ├── App.tsx              # Root component
-│   └── main.tsx             # Entry point
+│ ├── assets/ # Images, logos, resume
+│ ├── components/ # Reusable React components (Navbar, Hero, Skills, etc.)
+│ ├── hooks/ # Custom React hooks
+│ ├── lib/ # Utility libraries or helpers
+│ ├── pages/ # Page-level components
+│ ├── App.tsx # Root component
+│ └── main.tsx # Entry point
 ├── index.html
-├── tailwind.config.ts       # Tailwind configuration
-├── vite.config.ts           # Vite configuration
-├── tsconfig.json            # TypeScript configuration
-`
+├── tailwind.config.ts # Tailwind configuration
+├── vite.config.ts # Vite configuration
+├── tsconfig.json # TypeScript configuration
+```
+
+---
+## ✨ Features
+
+- Responsive design (mobile-first)
+- Hero section with typing animation
+- About Me & Skills section with parallax tilt effects
+- Projects showcase with interactive cards
+- Contact section with working mail links
+- User can be able to send mails via emailJS
+- Resume downloadable via button
+- SEO friendly `robots.txt` and meta tags
 
 ---
 
-## 🛠 Getting Started
+## 🖼️ Screenshots
 
-### 1. Clone the repository
-
-bash
-git clone https://github.com/TerminatorSS24/Portfolio.git
-cd Portfolio
-
-
-### 2. Install dependencies
-
-bash
-npm install
-# or
-yarn
-
-
-### 3. Start the development server
-
-bash
-npm run dev
-# or
-yarn dev
-
-
-### 4. Build for production
-
-bash
-npm run build
-# or
-yarn build
-
+![screenshot1](https://github.com/user-attachments/assets/f22de817-5839-4452-b361-d8a4875c438b)
+![screenshot2](https://github.com/user-attachments/assets/48a30263-a237-4d56-95d5-8b1c422d89c9)
 
 ---
 
-## 🎯 Features
+## 📦 Installation & Development
 
-* Fully responsive layout
-* Clean and consistent design using TailwindCSS
-* Optimized with Vite for lightning-fast builds
-* SEO-friendly meta tags
-* Easily customizable components and pages
-* Modular architecture for scalability
+To run locally:
+
+# Clone the repository
+```git clone https://github.com/TerminatorSS24/Portfolio.git```
+```cd Portfolio```
+
+# Install dependencies
+```npm install```
+
+# Start the development server
+```npm run dev```
+
+---
+## 🙌 Acknowledgements
+
+* [Heroicons](https://heroicons.com/)
+* [React Icons](https://react-icons.github.io/react-icons/)
+* [EmailJS](https://www.emailjs.com/)
 
 ---
 
-## ✍ Customization
-
-* Modify content in `src/pages/` and `src/components/` to reflect your personal info and projects.
-* Add assets like your resume, profile picture, and logos inside `src/assets/`.
-* Update Tailwind configuration in `tailwind.config.ts` to match your design preferences.
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-## 📬 Contact
-
-For any inquiries or collaborations, reach out via:
-
-* GitHub: [your-username](https://github.com/your-username)
-* LinkedIn: [your-linkedin](https://linkedin.com/in/your-linkedin)
-* Email: [your.email@example.com](mailto:your.email@example.com)
-
----
-
-> Built with ❤ using React + Vite + Tailwind
-
-
-
----
