@@ -2,6 +2,8 @@ import { Download } from "lucide-react";
 import ReactTypingEffect from "react-typing-effect";
 import { useTypewriter } from "react-simple-typewriter";
 import Button from "./Button";
+import profilePic from "../assets/pics/DSC_0752.jpeg"
+import cv from "../assets/resume/Subhraneel Saha.pdf";
 
 const HeroSection = () => {
   const [text] = useTypewriter({
@@ -52,7 +54,7 @@ const HeroSection = () => {
           </p>
 
           {/* Download CV Button */}
-          <a href="src/assets/Subhraneel Saha.pdf" download>
+          <a href={cv} download>
             <Button variant="primary" className="group">
               <Download className="w-4 h-4 group-hover:animate-bounce" />
               DOWNLOAD CV
@@ -70,7 +72,7 @@ const HeroSection = () => {
             {/* Profile image */}
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow-purple">
               <img
-                src={"src/assets/DSC_0752.JPG"}
+                src={profilePic}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
