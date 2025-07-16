@@ -4,7 +4,7 @@ Welcome to the source code of my personal developer portfolio website — a mode
 
 🔗 **Live Site**: [space-of-subhraneel.vercel.app](https://space-of-subhraneel.vercel.app)
 
-![screenshot](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f07d02fc-c820-417e-9162-15b2d3e9683d" />) <!-- Optional Screenshot -->
+![screenshot](https://github.com/user-attachments/assets/f07d02fc-c820-417e-9162-15b2d3e9683d) <!-- Optional Screenshot -->
 
 ---
 
