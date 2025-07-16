@@ -9,19 +9,7 @@ Welcome to the source code of my personal developer portfolio website — a mode
 ---
 
 ## 📂 Project Structure
-├── public/ # Static files
-├── src/
-│ ├── assets/ # Images, logos, resume
-│ ├── components/ # Reusable React components (Navbar, Hero, Skills, etc.)
-│ ├── hooks/ # Custom React hooks
-│ ├── lib/ # Utility libraries or helpers
-│ ├── pages/ # Page-level components
-│ ├── App.tsx # Root component
-│ └── main.tsx # Entry point
-├── index.html
-├── tailwind.config.ts # Tailwind configuration
-├── vite.config.ts # Vite configuration
-├── tsconfig.json # TypeScript configuration
+<pre lang="markdown"><code>## 📁 Folder Structure ``` my-portfolio/ ├── public/ │ └── assets/ # Images, resume, favicon, etc. ├── src/ │ ├── components/ # Reusable UI components (Navbar, Footer, etc.) │ ├── pages/ # Pages (Home, Projects, Contact) │ ├── hooks/ # Custom hooks │ ├── lib/ # Utility libraries │ ├── App.tsx │ ├── index.css │ └── main.tsx ├── tailwind.config.ts # Tailwind CSS configuration ├── postcss.config.js # PostCSS config ├── vite.config.ts # Vite config ├── package.json # Project metadata and scripts └── README.md ``` </code></pre>
 
 
 ---
