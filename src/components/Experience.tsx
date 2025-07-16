@@ -1,70 +1,3 @@
-// import React from "react";
-
-// const Experience = () => {
-//   return (
-//     <section id="experience" className="container mx-auto px-4 py-20">
-//       <div className="text-center mb-16">
-//         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-//           EXPERIENCE
-//         </h2>
-//         <div className="w-20 h-1 bg-gradient-purple mx-auto mb-6"></div>
-//         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-//           My professional journey and the roles that have shaped my
-//           expertise
-//         </p>
-//       </div>
-
-//       <div className="max-w-4xl mx-auto space-y-8">
-//         {/* Experience 1 */}
-//         <div className="bg-card p-8 rounded-xl border border-border hover:border-primary/30 transition-all duration-300">
-//           <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-//             <h3 className="text-2xl font-bold text-card-foreground">
-//               FrontEnd Developer Intern
-//             </h3>
-//             <span className="text-primary font-medium">2024</span>
-//           </div>
-//           <h4 className="text-lg text-muted-foreground mb-4">
-//             <a href="https://www.linkedin.com/company/shadowfoxinfo/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-//               ShadowFox
-//             </a>{" "}
-//             • Remote
-//           </h4>
-//           <p className="text-muted-foreground leading-relaxed">
-//             Created a terminal based well looking portfolio of mine. Fully
-//             functional. Used only simple Javascript.
-//             <br />
-//             Also created a simple e-commerce website, which is a static
-//             one, named EzShopping.
-//           </p>
-//         </div>
-
-//         {/* Experience 2 */}
-//         <div className="bg-card p-8 rounded-xl border border-border hover:border-primary/30 transition-all duration-300">
-//           <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-//             <h3 className="text-2xl font-bold text-card-foreground">
-//               FrontEnd Developer Intern
-//             </h3>
-//             <span className="text-primary font-medium">2025</span>
-//           </div>
-//           <h4 className="text-lg text-muted-foreground mb-4">
-//             <a href="https://www.linkedin.com/company/codsoft/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-//               CodSoft
-//             </a>{" "}
-//             • Remote
-//           </h4>
-//           <p className="text-muted-foreground leading-relaxed">
-//             Built responsive user interfaces using React and modern CSS
-//             frameworks. Optimized web applications for maximum speed and
-//             scalability.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Experience;
-
 import React from "react";
 import shadowfox from "../assets/company_logo/shadowfox.jpeg";
 import codsoft from "../assets/company_logo/codsoft.jpeg";
@@ -88,8 +21,6 @@ const Experience = () => {
       <div className="relative">
         {/* Vertical line */}
         <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
-
-        
 
         {/* Experience 1 */}
         <div className="flex flex-col sm:flex-row items-center mb-16 sm:justify-start">
@@ -153,7 +84,6 @@ const Experience = () => {
             </div>
           </div>
         </div>
-
 
         {/* Experience 2 */}
         <div className="flex flex-col sm:flex-row items-center mb-16 sm:justify-end">
@@ -223,3 +153,4 @@ const Experience = () => {
 };
 
 export default Experience;
+
