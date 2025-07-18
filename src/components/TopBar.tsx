@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaMedium } from "react-icons/fa";
+import { SiHashnode } from "react-icons/si";
 
 const TopBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,12 +77,20 @@ const TopBar = () => {
             <FaGithub size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/subhraneel-saha-9499ab253/"
+            href="https://medium.com/@subhraneelsaha_9631"
             target="_blank"
             rel="noopener noreferrer"
             className="text-topbar-foreground hover:text-primary"
           >
-            <FaLinkedin size={20} />
+            <FaMedium size={20} />
+          </a>
+          <a
+            href="https://hashnode.com/@TerminatorSS24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-topbar-foreground hover:text-primary"
+          >
+            <SiHashnode size={20} />
           </a>
         </div>
 
@@ -139,12 +148,20 @@ const TopBar = () => {
                 <FaGithub size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/subhraneel-saha-9499ab253/"
+                href="https://medium.com/@subhraneelsaha_9631"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-topbar-foreground hover:text-primary"
               >
-                <FaLinkedin size={20} />
+                <FaMedium size={20} />
+              </a>
+              <a
+                href="https://hashnode.com/@TerminatorSS24"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-topbar-foreground hover:text-primary"
+              >
+                <SiHashnode size={20} />
               </a>
             </div>
           </nav>
