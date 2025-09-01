@@ -54,7 +54,7 @@ const Education = () => {
                 <p className="text-sm text-gray-500 mt-2">2022 - 2026</p>
               </div>
             </div>
-            <p className="mt-4 text-gray-400">Current GPA: 8.52</p>
+            <p className="mt-4 text-gray-400">Current GPA: 8.53</p>
           </div>
         </div>
 
