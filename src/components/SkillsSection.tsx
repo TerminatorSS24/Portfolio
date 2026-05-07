@@ -1,5 +1,6 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 // Frontend logos
 import htmlLogo from "../assets/tech_logo/html.png";
@@ -134,66 +135,141 @@ const skillsData: SkillCategory[] = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
+const skillVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 const SkillsSection: React.FC = () => {
   return (
-  <section
-    id="skills"
-    className="py-24 px-[8vw] font-sans bg-skills-gradient clip-path-custom"
-  >
-    {/* Title */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
-        A collection of my technical skills and expertise honed through various projects and experiences
-      </p>
-    </div>
+    <motion.section
+      id="skills"
+      className="py-24 px-[8vw] font-sans bg-skills-gradient clip-path-custom"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.2 }}
+    >
+      {/* Title */}
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold text-white">
+          SKILLS
+        </h2>
 
-    {/* Grid Container */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {skillsData.map((category) => (
-        <Tilt
-          key={category.title}
-          tiltMaxAngleX={20}
-          tiltMaxAngleY={20}
-          perspective={1000}
-          scale={1.05}
-          transitionSpeed={1000}
-          gyroscope={true}
-          className="w-full h-full"
-        >
-          <div className="min-h-[350px] bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] flex flex-col justify-start">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6 text-center">
-              {category.title}
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 w-full">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-3 w-full"
-                >
-                  {skillLogos[skill.name] && (
-                    <div className="min-w-0 w-6 h-6 shrink-0">
-                      <img
-                        src={skillLogos[skill.name]}
-                        alt={skill.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                  )}
-                  <span className="text-xs sm:text-sm text-gray-300 break-words whitespace-pre-wrap">
-                    {skill.name}
-                  </span>
+        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+
+        <p className="text-gray-400 mt-4 text-lg font-semibold">
+          A collection of my technical skills and expertise honed
+          through various projects and experiences
+        </p>
+      </motion.div>
+
+      {/* Skills Grid */}
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        {skillsData.map((category) => (
+          <motion.div
+            key={category.title}
+            variants={cardVariants}
+          >
+            <Tilt
+              tiltMaxAngleX={20}
+              tiltMaxAngleY={20}
+              perspective={1000}
+              scale={1.03}
+              transitionSpeed={1000}
+              gyroscope={true}
+              className="w-full h-full"
+            >
+              <motion.div
+                whileHover={{
+                  y: -8,
+                  boxShadow:
+                    "0 0 35px rgba(130,69,236,0.5)",
+                }}
+                className="min-h-[350px] bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 rounded-2xl border border-white shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] flex flex-col justify-start transition-all duration-300"
+              >
+                <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-6 text-center">
+                  {category.title}
+                </h3>
+
+                <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 w-full">
+                  {category.skills.map((skill) => (
+                    <motion.div
+                      key={skill.name}
+                      variants={skillVariants}
+                      whileHover={{
+                        scale: 1.08,
+                        borderColor: "#8245ec",
+                      }}
+                      className="flex items-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-3 w-full transition-all duration-300"
+                    >
+                      {skillLogos[skill.name] && (
+                        <div className="min-w-0 w-6 h-6 shrink-0">
+                          <img
+                            src={skillLogos[skill.name]}
+                            alt={skill.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      )}
+
+                      <span className="text-xs sm:text-sm text-gray-300 break-words whitespace-pre-wrap">
+                        {skill.name}
+                      </span>
+                    </motion.div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        </Tilt>
-      ))}
-    </div>
-  </section>
-);
-
+              </motion.div>
+            </Tilt>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
+  );
 };
 
 export default SkillsSection;

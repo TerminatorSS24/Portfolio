@@ -57,7 +57,7 @@ const HeroSection = () => {
           <a href={cv} download className="block mt-6">
             <Button variant="primary" className="group">
               <Download className="w-4 h-4 group-hover:animate-bounce" />
-              DOWNLOAD CV
+              HERE IS MY CV!
             </Button>
           </a>
         </div>

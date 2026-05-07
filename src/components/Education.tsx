@@ -1,11 +1,44 @@
 import React from "react";
+import { motion } from "framer-motion";
 import nitLogo from "../assets/education_logo/narula_institute_of_technology.jpeg";
 import wbbse from "../assets/education_logo/wbbse.jpeg";
 import wbchse from "../assets/education_logo/wbchse.jpeg";
 
+const cardVariantsLeft = {
+  hidden: {
+    opacity: 0,
+    x: -80,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
+
+const cardVariantsRight = {
+  hidden: {
+    opacity: 0,
+    x: 80,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
+
 const Education = () => {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.2 }}
       id="education"
       className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >
@@ -35,7 +68,17 @@ const Education = () => {
           </div>
 
           {/* Content Card */}
-          <div className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:mr-44 ml-1 transition-transform duration-300 hover:scale-105">
+          <motion.div
+            variants={cardVariantsLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            whileHover={{
+              scale: 1.03,
+              y: -8,
+            }}
+            className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:mr-44 ml-1 transition-all duration-300"
+          >
             <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
                 <img
@@ -55,7 +98,7 @@ const Education = () => {
               </div>
             </div>
             <p className="mt-4 text-gray-400">Current GPA: 8.57</p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Class XII */}
@@ -70,7 +113,17 @@ const Education = () => {
           </div>
 
           {/* Content Card */}
-          <div className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:ml-44 ml-8 transition-transform duration-300 hover:scale-105">
+          <motion.div
+            variants={cardVariantsRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            whileHover={{
+              scale: 1.03,
+              y: -8,
+            }}
+            className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:ml-44 ml-8 transition-all duration-300"
+          >
             <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
                 <img
@@ -90,7 +143,7 @@ const Education = () => {
               </div>
             </div>
             <p className="mt-4 text-gray-400">Percentage: 86.4%</p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Class X */}
@@ -103,9 +156,18 @@ const Education = () => {
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-
           {/* Content Card */}
-          <div className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:mr-44 ml-1 transition-transform duration-300 hover:scale-105">
+          <motion.div
+            variants={cardVariantsLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            whileHover={{
+              scale: 1.03,
+              y: -8,
+            }}
+            className="w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] sm:mr-44 ml-1 transition-all duration-300"
+          >
             <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
                 <img
@@ -125,10 +187,10 @@ const Education = () => {
               </div>
             </div>
             <p className="mt-4 text-gray-400">Percentage: 92.14%</p>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
